@@ -10,12 +10,12 @@ function Modal(props) {
   });
   const onBackdrop = e => {
     if (e.currentTarget === e.target) {
-      this.props.onClose();
+      props.onClose();
     }
   };
   const onKeyDown = e => {
     if (e.code === 'Escape') {
-      this.props.onClose();
+      props.onClose();
     }
   };
   return createPortal(
