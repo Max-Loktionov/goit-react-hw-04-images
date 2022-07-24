@@ -25,7 +25,14 @@ function ImageGallery({ gallery }) {
 }
 
 ImageGallery.propTypes = {
-  gallery: PropTypes.array,
+  gallery: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string,
+      urlLargeImg: PropTypes.string,
+      id: PropTypes.number,
+      tags: PropTypes.string,
+    }).isRequired
+  ),
 };
 
 export default ImageGallery;
